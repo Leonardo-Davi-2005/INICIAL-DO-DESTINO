@@ -14,10 +14,13 @@ body {
 .container {
     width: 100%;
     max-width: 500px;
+    display: flex;              /* ADICIONADO */
+    flex-direction: column;     /* ADICIONADO */
+    gap: 15px;                  /* ADICIONADO - espaçamento entre tudo */
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 15px; /* reduzido porque agora tem gap */
     font-size: 20px;
 }
 
@@ -26,14 +29,14 @@ h1 {
     font-weight: bold;
     color: #ff00ff;
     text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* removido excesso */
     animation: aparecer 1.5s ease-out;
 }
 
 .explicacao {
     font-size: 16px;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 0; /* removido excesso */
 }
 
 button {
@@ -50,7 +53,7 @@ button {
 
 button:hover {
     background: #ff33ff;
-    transform: scale(1.1);
+    transform: scale(1.05); /* diminui um pouco para não "pular" demais */
 }
 
 @keyframes aparecer {
@@ -62,6 +65,14 @@ button:hover {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+#btnWhats {
+    background: #25D366;
+}
+
+#btnWhats:hover {
+    background: #1ebe5d;
 }
 
 /* Ajuste para celular pequeno */

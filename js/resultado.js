@@ -42,3 +42,21 @@ const som = document.getElementById("somAnimacao");
 som.volume = 0.4;
 som.currentTime = 0;
 som.play().catch(() => {});
+
+const btnWhats = document.getElementById("btnWhats");
+
+btnWhats.addEventListener("click", () => {
+
+    const letra = document.getElementById("letra").innerText;
+
+const mensagem = `\uD83D\uDD2E O destino revelou minha alma gêmea...
+
+A inicial é ${letra} \uD83D\uDE31\uD83D\uDC9C
+
+Descubra a sua agora \uD83D\uDC47
+https://leonardo-davi-2005.github.io/INICIAL-DO-DESTINO/`;
+
+    const url = `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url, "_blank");
+});
