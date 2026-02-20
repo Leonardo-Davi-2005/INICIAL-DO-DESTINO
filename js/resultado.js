@@ -31,3 +31,14 @@ document.getElementById("explicacao").innerHTML =
     `<strong>${nome}</strong>, sua energia combinada com o ano <strong>${ano}</strong>
     e aquilo que você gosta revela que sua alma gêmea tem a inicial <strong>${inicial}</strong>.<br><br>
     ${texto} 💖`;
+
+
+const letraElemento = document.getElementById("letra");
+
+letraElemento.innerText = inicial;
+
+// 🔊 Tocar som da animação
+const som = document.getElementById("somAnimacao");
+som.volume = 0.4;
+som.currentTime = 0;
+som.play().catch(() => {});
